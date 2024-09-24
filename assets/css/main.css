@@ -17,9 +17,117 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #007bff; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+}
+
+.skill-icon {
+  font-size: 4em;
+  color: #007bff; /* Blue icons */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.skill-item img.skill-icon {
+  width: 60px;
+  height: 60px;
+  transition: filter 0.3s ease;
+  filter: brightness(0.6); /* Adjust brightness */
+}
+
+/* Hover effect */
+.skill-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Darker background on hover */
+  border-color: #66b2ff; /* Light blue border on hover */
+}
+
+.skill-item:hover .skill-icon {
+  color: #ffffff; /* White on hover for icons */
+}
+
+.skill-item:hover img.skill-icon {
+  filter: brightness(1); /* Brighten SVG icons */
+}
+
+/* Equal row height */
+.skills-grid {
+  grid-auto-rows: 1fr;
+}
+
+
+  /* Styling the hero section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Styling the text container */
+  .text-container {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    top: 20%; /* Adjust to move the text higher/lower */
+  }
+
+  .text-container h2 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  .text-container p {
+    font-size: 1.5em;
+  }
+
+  /* Styling the video */
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the section while maintaining aspect ratio */
+    z-index: 1;
+    transform: scale(1.1); /* Adjust the scale for zoom effect */
+  }
+
+  /* Optional dark overlay to make text more visible */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: 1;
+  }
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: ; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
